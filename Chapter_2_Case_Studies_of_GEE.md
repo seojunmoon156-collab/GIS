@@ -48,7 +48,7 @@ drySeasonMin = drySeason.min()
 drySeasonNIR = drySeasonMin.select('SR_B5')
 drySeasonWater = drySeasonNIR.lt(11000)
 
-Map = geemap.Map(center = [12.9674,104.0529], zoom = 8)
+Map = geemap.Map(center=[12.9674, 104.0529], zoom=8, basemap='SATELLITE')
 vis_Para = {'min': 0, 'max': 1}
 Map.addLayer(drySeasonWater, vis_Para, name="Dry Season")
 Map
@@ -66,7 +66,7 @@ wetSeasonMin = wetSeason.min()
 wetSeasonNIR = wetSeasonMin.select('SR_B5')
 wetSeasonWater = wetSeasonNIR.lt(11000)
 
-Map = geemap.Map(center = [12.9674,104.0529], zoom = 8)
+Map = geemap.Map(center=[12.9674, 104.0529], zoom=8, basemap='SATELLITE')
 vis_Para = {'min': 0, 'max': 1}
 Map.addLayer(wetSeasonWater, vis_Para, name="Wet Season")
 Map
